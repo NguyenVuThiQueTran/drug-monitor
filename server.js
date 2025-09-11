@@ -11,6 +11,8 @@ app.set('view engine', 'ejs');//Put before app.use, etc. Lets us use EJS for vie
 //use body-parser to parse requests
 app.use(bodyParser.urlencoded({extended:true}));
 //indicates which is the folder where static files are served from
+app.use(bodyParser.json()); 
+
 app.use(express.static('assets'));
 //use morgan to log http requests
 app.use(morgan('tiny'));
